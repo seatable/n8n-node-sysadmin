@@ -17,7 +17,7 @@ Currently, n8n is not shipped with this SeaTable Sys-Admin API node. Therefore a
 1. Open your n8n server.
 1. Go to **Settings > Community Nodes**.
 1. Select **Install**.
-1. Enter `n8n-nodes-neutrino` in **Enter npm package name**.
+1. Enter `n8n-nodes-seaadmin` in **Enter npm package name**.
 1. Agree to the [risks](https://docs.n8n.io/integrations/community-nodes/risks/) of using community nodes: select **I understand the risks of installing unverified code from a public source**.
 1. Select **Install**.
 
