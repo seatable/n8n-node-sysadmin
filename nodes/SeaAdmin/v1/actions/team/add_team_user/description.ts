@@ -6,7 +6,7 @@ export const description: SeaAdminTeamProperties = [
 		name: 'org_id',
 		type: 'number',
 		required: true,
-		placeholder: '1',
+		placeholder: 'Demo Testing',
 		displayOptions: {
 			show: {
 				resource: ['team'],
