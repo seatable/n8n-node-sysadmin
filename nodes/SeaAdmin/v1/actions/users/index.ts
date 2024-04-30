@@ -6,8 +6,11 @@ import * as list_users from './list_users';
 import * as add_new_user from './add_new_user'
 import * as  delete_user from './delete_user';
 import * as  get_user from './get_user';
+import * as list_admin_users from './list_admin_users';
 
-export { list_users,add_new_user,delete_user,get_user };
+
+
+export { list_users,add_new_user,delete_user,get_user,list_admin_users};
 
 export const descriptions: INodeProperties[] = [
 	{
@@ -45,11 +48,18 @@ export const descriptions: INodeProperties[] = [
 				description: 'get User Info with specified user_id',
 				action: 'gets User Info',
 			},
+			{
+				name: 'List Admin Users',
+				value: 'list_admin_users',
+				description: 'gets a List of all Admin Users',
+				action: 'gets a List of all Admin Users',
+			},
 		],
 		default: '',
 	},
 	...list_users.description,
 	...add_new_user.description,
 	...delete_user.description,
-	...get_user.description
+	...get_user.description,
+	...list_admin_users.description
 ];
