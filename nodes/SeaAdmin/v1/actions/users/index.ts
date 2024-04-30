@@ -5,7 +5,9 @@ import type { INodeProperties } from 'n8n-workflow';
 import * as list_users from './list_users'; 
 import * as add_new_user from './add_new_user'
 import * as  delete_user from './delete_user';
-export { list_users,add_new_user,delete_user };
+import * as  get_user from './get_user';
+
+export { list_users,add_new_user,delete_user,get_user };
 
 export const descriptions: INodeProperties[] = [
 	{
@@ -37,10 +39,17 @@ export const descriptions: INodeProperties[] = [
 				description: 'deletes User with specified user_id',
 				action: 'delete User',
 			},
+			{
+				name: 'Get User',
+				value: 'get_user',
+				description: 'get User Info with specified user_id',
+				action: 'gets User Info',
+			},
 		],
 		default: '',
 	},
 	...list_users.description,
 	...add_new_user.description,
-	...delete_user.description
+	...delete_user.description,
+	...get_user.description
 ];
