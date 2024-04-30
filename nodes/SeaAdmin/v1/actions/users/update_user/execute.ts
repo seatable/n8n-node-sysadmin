@@ -1,0 +1,64 @@
+import type { IExecuteFunctions, IDataObject, INodeExecutionData } from 'n8n-workflow';
+import { OptionsWithUri } from 'request';
+
+export async function update_user(
+	this: IExecuteFunctions,
+	index: number,
+): Promise<INodeExecutionData[]> {
+	// get URL
+	const credentials = await this.getCredentials('seaadmin');
+	const baseURL = credentials?.domain || 'https://cloud.seatable.io';
+
+	const user_id = this.getNodeParameter('user_id', index) as string;
+	const is_staff = this.getNodeParameter('is_staff', index) as boolean;
+	const is_active = this.getNodeParameter('is_active', index) as boolean;
+	const role = this.getNodeParameter('role', index) as string;
+	const name = this.getNodeParameter('name', index) as string;
+	const login_id = this.getNodeParameter('login_id', index) as string;
+	const contact_email = this.getNodeParameter('contact_email', index) as string;
+	const id_in_org = this.getNodeParameter('id_in_org', index) as string;
+	const unit = this.getNodeParameter('unit', index) as string;
+	const password = this.getNodeParameter('password', index) as string;
+	const institution = this.getNodeParameter('institution', index) as string;
+	const row_limit = this.getNodeParameter('row_limit', index) as number;
+	const quota_total = this.getNodeParameter('quota_total', index) as string;
+	const asset_quota_mb = this.getNodeParameter('asset_quota_mb', index) as string;
+
+
+	// we need to set only keys that we use, otherwise seatable errors
+	let options: OptionsWithUri = {
+		method: 'PUT',
+		qs: {},
+		body: {
+			is_staff:is_staff,
+			is_active:is_active,
+			row_limit:row_limit
+		},
+		uri: baseURL + '/api/v2.1/admin/users/' + user_id + '/',
+		json: true,
+	};
+
+	function checkAndSet(options : OptionsWithUri,body_variable : string,key : string) {
+		if(body_variable !== ''){
+			options.body[key] = body_variable;
+		}
+	}
+	//checkAndSet(options,is_staff,"is_staff");
+	checkAndSet(options,role,"role");
+	checkAndSet(options,name,"name");
+	checkAndSet(options,login_id,"login_id");
+	checkAndSet(options,contact_email,"contact_email");
+	checkAndSet(options,id_in_org,"id_in_org");
+	checkAndSet(options,unit,"unit");
+	checkAndSet(options,password,"password");
+	checkAndSet(options,institution,"institution");
+	checkAndSet(options,quota_total,"quota_total");
+	checkAndSet(options,asset_quota_mb,"asset_quota_mb");
+
+
+
+	console.log(options);
+	const responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
+
+	return this.helpers.returnJsonArray(responseData as IDataObject[]);
+}

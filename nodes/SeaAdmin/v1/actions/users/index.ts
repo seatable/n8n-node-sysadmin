@@ -7,10 +7,9 @@ import * as add_new_user from './add_new_user'
 import * as  delete_user from './delete_user';
 import * as  get_user from './get_user';
 import * as list_admin_users from './list_admin_users';
+import * as update_user from './update_user'
 
-
-
-export { list_users,add_new_user,delete_user,get_user,list_admin_users};
+export { update_user,list_users,add_new_user,delete_user,get_user,list_admin_users};
 
 export const descriptions: INodeProperties[] = [
 	{
@@ -54,6 +53,12 @@ export const descriptions: INodeProperties[] = [
 				description: 'gets a List of all Admin Users',
 				action: 'gets a List of all Admin Users',
 			},
+			{
+				name: 'Update User',
+				value: 'update_user',
+				description: 'updates User info',
+				action: 'update User info',
+			},
 		],
 		default: '',
 	},
@@ -61,5 +66,6 @@ export const descriptions: INodeProperties[] = [
 	...add_new_user.description,
 	...delete_user.description,
 	...get_user.description,
-	...list_admin_users.description
+	...list_admin_users.description,
+	...update_user.description
 ];
