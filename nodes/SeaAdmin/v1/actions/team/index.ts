@@ -75,6 +75,7 @@ export const descriptions: INodeProperties[] = [
 	...update_team_user.description,
 	...delete_team_user.description,
 	...add_team.description,
-	...add_team_user.description
+	...add_team_user.description,
+	
 
 ];
