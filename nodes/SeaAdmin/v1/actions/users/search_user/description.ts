@@ -2,11 +2,11 @@ import type { SeaAdminUsersProperties } from '../../Interfaces';
 
 export const description: SeaAdminUsersProperties = [
 	{
-		displayName: 'Per Page',
-		name: 'per_page',
-		type: 'number',
+		displayName: 'query',
+		name: 'query',
+		type: 'string',
 		required: false,
-		placeholder: '25',
+		placeholder: 'teamuser001@example.com',
 		displayOptions: {
 			show: {
 				resource: ['users'],
@@ -14,6 +14,6 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description: 'The number of results that should be returned. If no value is provided, 25 results will be returned.',
+		description: 'Enter any query string from the user\'s name, ID, or contact email.',
 	},
 ];
