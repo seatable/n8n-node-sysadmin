@@ -10,7 +10,7 @@ export const description: SeaAdminUsersProperties = [
 		displayOptions: {
 			show: {
 				resource: ['users'],
-				operation: ['search_user'],
+				operation: ['list_users'],
 			},
 		},
 		default: '',

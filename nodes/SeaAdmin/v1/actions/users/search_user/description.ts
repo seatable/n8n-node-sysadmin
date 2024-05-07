@@ -15,5 +15,5 @@ export const description: SeaAdminUsersProperties = [
 		},
 		default: '',
 		description: 'Enter any query string from the user\'s name, ID, or contact email.',
-	},
+	}
 ];
