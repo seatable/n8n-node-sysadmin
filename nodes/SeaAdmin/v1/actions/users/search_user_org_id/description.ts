@@ -28,7 +28,7 @@ export const description: SeaAdminUsersProperties = [
 				operation: ['search_user_org_id'],
 			},
 		},
-		default: '',
+		default: '1',
 		description: 'search for user in the org with specified org_id',
 	},
 	{
@@ -36,14 +36,14 @@ export const description: SeaAdminUsersProperties = [
 		name: 'limit',
 		type: 'number',
 		required: false,
-		placeholder: 'teamuser001@example.com',
+		placeholder: '1000',
 		displayOptions: {
 			show: {
 				resource: ['users'],
 				operation: ['search_user_org_id'],
 			},
 		},
-		default: '',
+		default: '1000',
 		description: 'limit the amount of results',
 	},
 ];
