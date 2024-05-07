@@ -24,9 +24,7 @@ export async function update_user(
 	const quota_total = this.getNodeParameter('quota_total', index) as string;
 	const asset_quota_mb = this.getNodeParameter('asset_quota_mb', index) as string;
 
-
 	let body : FormData = new FormData();
-	// we need to set only keys that we use, otherwise seatable errors
 	let options: OptionsWithUri = {
 		method: 'PUT',
 		qs: {},
