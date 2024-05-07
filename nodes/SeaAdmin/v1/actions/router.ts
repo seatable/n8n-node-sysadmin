@@ -4,6 +4,7 @@ import * as team from './team';
 import * as statistics from './statistics';
 import * as users from './users';
 import * as system_info from './system_info';
+import * as bases from './bases';
 
 
 import { SeaAdmin } from './Interfaces';
@@ -37,6 +38,9 @@ export async function router(this: IExecuteFunctions): Promise<INodeExecutionDat
 			}
 			else if (seaadmin.resource === 'system_info') {
 				responseData = await system_info[seaadmin.operation].execute.call(this, i);
+			}
+			else if (seaadmin.resource === 'bases') {
+				responseData = await bases[seaadmin.operation].execute.call(this, i);
 			}
 
 			const executionData = this.helpers.constructExecutionMetaData(
