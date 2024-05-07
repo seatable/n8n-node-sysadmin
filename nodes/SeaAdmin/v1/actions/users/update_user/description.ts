@@ -178,7 +178,7 @@ export const description: SeaAdminUsersProperties = [
 				operation: ['update_user'],
 			},
 		},
-		default: '',
+		default: '0',
 		description: 'User\'s total row limit in number. For example 10000.',
 	},
 	{

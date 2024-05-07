@@ -25,25 +25,23 @@ export async function update_user(
 	const asset_quota_mb = this.getNodeParameter('asset_quota_mb', index) as string;
 
 
+	let body : FormData = new FormData();
 	// we need to set only keys that we use, otherwise seatable errors
 	let options: OptionsWithUri = {
 		method: 'PUT',
 		qs: {},
-		body: {
-			is_staff:is_staff,
-			is_active:is_active,
-			row_limit:row_limit
-		},
+		body,
 		uri: baseURL + '/api/v2.1/admin/users/' + user_id + '/',
 		json: true,
 	};
 
 	function checkAndSet(options : OptionsWithUri,body_variable : string,key : string) {
 		if(body_variable !== ''){
-			options.body[key] = body_variable;
+			body.set(key,body_variable);
 		}
 	}
-	//checkAndSet(options,is_staff,"is_staff");
+
+
 	checkAndSet(options,role,"role");
 	checkAndSet(options,name,"name");
 	checkAndSet(options,login_id,"login_id");
@@ -54,10 +52,14 @@ export async function update_user(
 	checkAndSet(options,institution,"institution");
 	checkAndSet(options,quota_total,"quota_total");
 	checkAndSet(options,asset_quota_mb,"asset_quota_mb");
+	body.set("is_staff",is_staff);
+	body.set("is_active",is_active);
+	body.set("row_limit",row_limit);
 
 
 
-	console.log(options);
+
+	console.log(body);
 	const responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
 
 	return this.helpers.returnJsonArray(responseData as IDataObject[]);

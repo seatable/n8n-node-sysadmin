@@ -15,18 +15,19 @@ export async function add_new_user(
 	const is_staff = this.getNodeParameter('is_staff', index) as boolean;;
 	const is_active = this.getNodeParameter('is_active', index) as boolean;;
 
+	let body : FormData = new FormData();
+	body.set("email",email) ;
+	body.set("password",password) ;
+	body.set("name",name) ;
+	body.set("is_staff",is_staff) ;
+	body.set("is_active",is_active) ;
+
 	const options: OptionsWithUri = {
 		method: 'POST',
 		qs: {},
-		body: {
-			email:email,
-			password:password,
-			name:name,
-			is_staff:is_staff,
-			is_active:is_active
-		},
+		body,
 		uri: baseURL + '/api/v2.1/admin/users/',
-		json: true,
+		json:false
 	};
 	const responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
 
