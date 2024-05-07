@@ -3,6 +3,7 @@ import type { INodeTypeDescription } from 'n8n-workflow';
 import * as team from './team';
 import * as statistics from './statistics';
 import * as users from './users';
+import * as system_info from './system_info'
 
 export const versionDescription: INodeTypeDescription = {
 	displayName: 'SeaTable Sys-Admin',
@@ -42,11 +43,16 @@ export const versionDescription: INodeTypeDescription = {
 					name: 'Users',
 					value: 'users',
 				},
+				{
+					name:  "System Info",
+					value: "system_info"
+				},
 			],
 			default: 'team',
 		},
 		...team.descriptions,
 		...statistics.descriptions,
-		...users.descriptions
+		...users.descriptions,
+		...system_info.descriptions
 	],
 };

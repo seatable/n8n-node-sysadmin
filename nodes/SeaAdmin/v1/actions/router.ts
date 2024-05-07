@@ -3,6 +3,8 @@ import type { IExecuteFunctions, IDataObject, INodeExecutionData } from 'n8n-wor
 import * as team from './team';
 import * as statistics from './statistics';
 import * as users from './users';
+import * as system_info from './system_info';
+
 
 import { SeaAdmin } from './Interfaces';
 
@@ -26,11 +28,15 @@ export async function router(this: IExecuteFunctions): Promise<INodeExecutionDat
 		try {
 			if (seaadmin.resource === 'team') {
 				responseData = await team[seaadmin.operation].execute.call(this, i);
-			} else if (seaadmin.resource === 'statistics') {
+			} 
+			else if (seaadmin.resource === 'statistics') {
 				responseData = await statistics[seaadmin.operation].execute.call(this, i);
 			}
 			else if (seaadmin.resource === 'users') {
 				responseData = await users[seaadmin.operation].execute.call(this, i);
+			}
+			else if (seaadmin.resource === 'system_info') {
+				responseData = await system_info[seaadmin.operation].execute.call(this, i);
 			}
 
 			const executionData = this.helpers.constructExecutionMetaData(
