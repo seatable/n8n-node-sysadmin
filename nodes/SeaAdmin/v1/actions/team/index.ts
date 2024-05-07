@@ -1,7 +1,6 @@
 import * as list_teams from './list_teams';
 import * as delete_team from './delete_team';
 import * as list_team_users from './list_team_users';
-import * as update_team_user from './update_team_user';
 import * as delete_team_user from './delete_team_user';
 import * as add_team from './add_team';
 
@@ -10,7 +9,7 @@ import * as add_team_user from './add_team_user';
 
 import type { INodeProperties } from 'n8n-workflow';
 
-export { add_team_user,add_team,list_teams, delete_team, list_team_users, update_team_user, delete_team_user };
+export { add_team_user,add_team,list_teams, delete_team, list_team_users, delete_team_user };
 
 export const descriptions: INodeProperties[] = [
 	{
@@ -43,12 +42,6 @@ export const descriptions: INodeProperties[] = [
 				action: 'List Teams Users',
 			},
 			{
-				name: 'Update a team user',
-				value: 'update_team_user',
-				description: 'Updates a team user.',
-				action: 'Update a Team User',
-			},
-			{
 				name: 'Delete a team user',
 				value: 'delete_team_user',
 				description: 'Deletes a team user.',
@@ -72,7 +65,6 @@ export const descriptions: INodeProperties[] = [
 	...list_teams.description,
 	...delete_team.description,
 	...list_team_users.description,
-	...update_team_user.description,
 	...delete_team_user.description,
 	...add_team.description,
 	...add_team_user.description

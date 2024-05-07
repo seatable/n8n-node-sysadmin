@@ -15,18 +15,20 @@ export async function add_team_user(
 	const name = this.getNodeParameter('name', index) as string;
 	const with_workspace = this.getNodeParameter('with_workspace', index) as boolean;
 
+
+	let body : FormData = new FormData();
+	body.set("email",email);
+	body.set("password",password);
+	body.set("name",name);
+	body.set("with_workspace",with_workspace);
+
  
 	const options: OptionsWithUri = {
 		method: 'POST',
 		qs: {},
-		body: {
-			email:email,
-			password:password,
-			name:name,
-			with_workspace:with_workspace
-		},
+		body,
 		uri: baseURL + '/api/v2.1/admin/organizations/' + org_id + '/users/',
-		json: true,
+		json: false,
 	};
 	const responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
 

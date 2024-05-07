@@ -59,7 +59,6 @@ export async function update_user(
 
 
 
-	console.log(body);
 	const responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
 
 	return this.helpers.returnJsonArray(responseData as IDataObject[]);
