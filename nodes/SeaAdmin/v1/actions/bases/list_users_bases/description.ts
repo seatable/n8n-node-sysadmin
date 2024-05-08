@@ -2,11 +2,11 @@ import type { SeaAdminBasesProperties } from '../../Interfaces';
 
 export const description: SeaAdminBasesProperties = [
 	{
-		displayName: 'user id',
+		displayName: 'User-Account',
 		name: 'user_id',
 		type: 'string',
 		required: true,
-		placeholder: 'af19103161231@auth.local',
+		placeholder: '...@auth.local',
 		displayOptions: {
 			show: {
 				resource: ['bases'],
@@ -14,7 +14,8 @@ export const description: SeaAdminBasesProperties = [
 			},
 		},
 		default: '',
-		description: '',
+		description:
+			'The unique user account in the form ...@auth.local. This is not the email address of the user.',
 	},
 	{
 		displayName: 'Page',
@@ -29,7 +30,7 @@ export const description: SeaAdminBasesProperties = [
 			},
 		},
 		default: '1',
-		description: 'The page number you want to start showing the entries. If no value is provided, 1 will be used.',
+		description: 'The page number you want to start showing the entries.',
 	},
 	{
 		displayName: 'Per Page',
@@ -44,7 +45,6 @@ export const description: SeaAdminBasesProperties = [
 			},
 		},
 		default: '25',
-		description: 'The number of results that should be returned. If no value is provided, 25 results will be returned.',
+		description: 'The number of results that should be returned.',
 	},
-
 ];

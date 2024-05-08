@@ -14,7 +14,7 @@ export const description: SeaAdminGroupsProperties = [
 			},
 		},
 		default: '1',
-		description: 'The page number you want to start showing the entries. If no value is provided, 1 will be used.',
+		description: 'The page number you want to start showing the entries.',
 	},
 	{
 		displayName: 'Per Page',
@@ -29,10 +29,10 @@ export const description: SeaAdminGroupsProperties = [
 			},
 		},
 		default: '25',
-		description: 'The number of results that should be returned. If no value is provided, 25 results will be returned.',
+		description: 'The number of results that should be returned.',
 	},
 	{
-		displayName: 'Name',
+		displayName: 'Limit output by group name',
 		name: 'name',
 		type: 'string',
 		required: false,
@@ -43,9 +43,8 @@ export const description: SeaAdminGroupsProperties = [
 				operation: ['list_groups'],
 			},
 		},
-		default: 'Enter any query string from the name of the group.',
-		description: '',
+		default: '',
+		description:
+			'Enter any query string from the name of the group. Capitalization does not matter.',
 	},
-
-
 ];

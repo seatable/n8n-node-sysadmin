@@ -3,7 +3,7 @@ import * as list_users_bases from './list_users_bases';
 
 import type { INodeProperties } from 'n8n-workflow';
 
-export {list_all_bases,list_users_bases };
+export { list_all_bases, list_users_bases };
 
 export const descriptions: INodeProperties[] = [
 	{
@@ -18,19 +18,19 @@ export const descriptions: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'List All Bases',
+				name: 'List all bases',
 				value: 'list_all_bases',
-				description: 'Lists all Bases',
-				action: 'List all Bases',
+				description: 'Lists all bases',
+				action: 'List all bases',
 			},
 			{
-				name: 'List All Users Bases',
+				name: 'List all bases from a user',
 				value: 'list_users_bases',
-				description: 'Lists all Bases by User',
-				action: 'Lists all Bases by User',
+				description: 'Lists all bases from a user',
+				action: 'Lists all bases from a user',
 			},
 		],
-		default: 'list_active_users',
+		default: 'list_all_bases',
 	},
 	...list_all_bases.description,
 	...list_users_bases.description,

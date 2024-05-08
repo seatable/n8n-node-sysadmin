@@ -16,8 +16,8 @@ export async function list_all_bases(
 	const options: OptionsWithUri = {
 		method: 'GET',
 		qs: {
-			per_page:per_page,
-			page:page,
+			per_page: per_page,
+			page: page,
 		},
 		body: {},
 		uri: baseURL + '/api/v2.1/admin/dtables/',
