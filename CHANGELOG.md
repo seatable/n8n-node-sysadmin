@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.0.0 (2024-05-08)
+
+Adding additional endpoints for
+
+- Bases
+- Groups
+- Users
+- Teams
+- Statistics
+- System Info
+
 ## v0.9.2 (2024-04-03)
 
 Fixing domain for SeaTable Cloud.

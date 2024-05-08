@@ -53,6 +53,7 @@ export class SeaAdminApi implements ICredentialType {
 		properties: {
 			headers: {
 				Authorization: '={{"Bearer " + $credentials.token}}',
+				accept: 'application/json',
 			},
 		},
 	};

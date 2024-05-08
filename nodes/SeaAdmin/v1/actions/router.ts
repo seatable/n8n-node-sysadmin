@@ -27,23 +27,18 @@ export async function router(this: IExecuteFunctions): Promise<INodeExecutionDat
 		} as SeaAdmin;
 
 		try {
-			if (seaadmin.resource === 'team') {
-				responseData = await team[seaadmin.operation].execute.call(this, i);
-			} 
-			else if (seaadmin.resource === 'statistics') {
-				responseData = await statistics[seaadmin.operation].execute.call(this, i);
-			}
-			else if (seaadmin.resource === 'users') {
-				responseData = await users[seaadmin.operation].execute.call(this, i);
-			}
-			else if (seaadmin.resource === 'system_info') {
-				responseData = await system_info[seaadmin.operation].execute.call(this, i);
-			}
-			else if (seaadmin.resource === 'bases') {
+			if (seaadmin.resource === 'bases') {
 				responseData = await bases[seaadmin.operation].execute.call(this, i);
-			}
-			else if (seaadmin.resource === 'groups') {
+			} else if (seaadmin.resource === 'groups') {
 				responseData = await groups[seaadmin.operation].execute.call(this, i);
+			} else if (seaadmin.resource === 'users') {
+				responseData = await users[seaadmin.operation].execute.call(this, i);
+			} else if (seaadmin.resource === 'team') {
+				responseData = await team[seaadmin.operation].execute.call(this, i);
+			} else if (seaadmin.resource === 'statistics') {
+				responseData = await statistics[seaadmin.operation].execute.call(this, i);
+			} else if (seaadmin.resource === 'system_info') {
+				responseData = await system_info[seaadmin.operation].execute.call(this, i);
 			}
 
 			const executionData = this.helpers.constructExecutionMetaData(

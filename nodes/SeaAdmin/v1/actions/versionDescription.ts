@@ -3,10 +3,9 @@ import type { INodeTypeDescription } from 'n8n-workflow';
 import * as team from './team';
 import * as statistics from './statistics';
 import * as users from './users';
-import * as system_info from './system_info'
+import * as system_info from './system_info';
 import * as bases from './bases';
 import * as groups from './groups';
-
 
 export const versionDescription: INodeTypeDescription = {
 	displayName: 'SeaTable Sys-Admin',
@@ -35,6 +34,22 @@ export const versionDescription: INodeTypeDescription = {
 			noDataExpression: true,
 			options: [
 				{
+					name: 'System Info',
+					value: 'system_info',
+				},
+				{
+					name: 'Bases',
+					value: 'bases',
+				},
+				{
+					name: 'Groups',
+					value: 'groups',
+				},
+				{
+					name: 'Users',
+					value: 'users',
+				},
+				{
 					name: 'Team',
 					value: 'team',
 				},
@@ -42,30 +57,14 @@ export const versionDescription: INodeTypeDescription = {
 					name: 'Statistics',
 					value: 'statistics',
 				},
-				{
-					name: 'Users',
-					value: 'users',
-				},
-				{
-					name:  "System Info",
-					value: "system_info"
-				},
-				{
-					name:'Bases',
-					value:"bases"
-				},
-				{
-					name:"Groups",
-					value:"groups"
-				}
 			],
-			default: 'team',
+			default: 'system_info',
 		},
-		...team.descriptions,
-		...statistics.descriptions,
-		...users.descriptions,
 		...system_info.descriptions,
 		...bases.descriptions,
-		...groups.descriptions
+		...groups.descriptions,
+		...users.descriptions,
+		...team.descriptions,
+		...statistics.descriptions,
 	],
 };
