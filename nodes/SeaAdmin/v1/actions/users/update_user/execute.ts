@@ -17,14 +17,12 @@ export async function update_user(
 	const login_id = this.getNodeParameter('login_id', index) as string;
 	const contact_email = this.getNodeParameter('contact_email', index) as string;
 	const id_in_org = this.getNodeParameter('id_in_org', index) as string;
-	const unit = this.getNodeParameter('unit', index) as string;
 	const password = this.getNodeParameter('password', index) as string;
-	const institution = this.getNodeParameter('institution', index) as string;
 	const row_limit = this.getNodeParameter('row_limit', index) as number;
 	const quota_total = this.getNodeParameter('quota_total', index) as string;
 	const asset_quota_mb = this.getNodeParameter('asset_quota_mb', index) as string;
 
-	let body : FormData = new FormData();
+	let body: FormData = new FormData();
 	let options: OptionsWithUri = {
 		method: 'PUT',
 		qs: {},
@@ -33,29 +31,23 @@ export async function update_user(
 		json: true,
 	};
 
-	function checkAndSet(options : OptionsWithUri,body_variable : string,key : string) {
-		if(body_variable !== ''){
-			body.set(key,body_variable);
+	function checkAndSet(options: OptionsWithUri, body_variable: string, key: string) {
+		if (body_variable !== '') {
+			body.set(key, body_variable);
 		}
 	}
 
-
-	checkAndSet(options,role,"role");
-	checkAndSet(options,name,"name");
-	checkAndSet(options,login_id,"login_id");
-	checkAndSet(options,contact_email,"contact_email");
-	checkAndSet(options,id_in_org,"id_in_org");
-	checkAndSet(options,unit,"unit");
-	checkAndSet(options,password,"password");
-	checkAndSet(options,institution,"institution");
-	checkAndSet(options,quota_total,"quota_total");
-	checkAndSet(options,asset_quota_mb,"asset_quota_mb");
-	body.set("is_staff",is_staff);
-	body.set("is_active",is_active);
-	body.set("row_limit",row_limit);
-
-
-
+	checkAndSet(options, role, 'role');
+	checkAndSet(options, name, 'name');
+	checkAndSet(options, login_id, 'login_id');
+	checkAndSet(options, contact_email, 'contact_email');
+	checkAndSet(options, id_in_org, 'id_in_org');
+	checkAndSet(options, password, 'password');
+	checkAndSet(options, quota_total, 'quota_total');
+	checkAndSet(options, asset_quota_mb, 'asset_quota_mb');
+	body.set('is_staff', is_staff);
+	body.set('is_active', is_active);
+	body.set('row_limit', row_limit);
 
 	const responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
 

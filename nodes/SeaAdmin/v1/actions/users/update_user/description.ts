@@ -2,11 +2,11 @@ import type { SeaAdminUsersProperties } from '../../Interfaces';
 
 export const description: SeaAdminUsersProperties = [
 	{
-		displayName: 'User Id',
+		displayName: 'User-Account',
 		name: 'user_id',
 		type: 'string',
 		required: true,
-		placeholder: 'a1201923ffas919@auth.local',
+		placeholder: '...@auth.local',
 		displayOptions: {
 			show: {
 				resource: ['users'],
@@ -14,10 +14,11 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description: '',
+		description:
+			'The unique user account in the form ...@auth.local. This is not the email address of the user.',
 	},
 	{
-		displayName: 'Is Staff',
+		displayName: 'Grant system admin rights',
 		name: 'is_staff',
 		type: 'boolean',
 		required: false,
@@ -29,10 +30,10 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: false,
-		description: 'true or false if the user will be an (system) admin. false by default.',
+		description: 'true or false if the user will be an (system) admin.',
 	},
 	{
-		displayName: 'Is Active',
+		displayName: 'Active the account',
 		name: 'is_active',
 		type: 'boolean',
 		required: false,
@@ -44,7 +45,7 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: true,
-		description: 'true or false if the user could log in. true by default.',
+		description: 'An active account could be used right away. Login is possible.',
 	},
 	{
 		displayName: 'Role',
@@ -59,7 +60,8 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description: 'Update their role. For details about roles, refer to SeaTable Roles and Permissions.',
+		description:
+			'Update their role. For details about roles, refer to SeaTable Roles and Permissions.',
 	},
 	{
 		displayName: 'Name',
@@ -77,7 +79,7 @@ export const description: SeaAdminUsersProperties = [
 		description: 'Full name of the user.',
 	},
 	{
-		displayName: 'login_id',
+		displayName: 'Login ID',
 		name: 'login_id',
 		type: 'string',
 		required: false,
@@ -92,7 +94,7 @@ export const description: SeaAdminUsersProperties = [
 		description: 'Optional login ID. Valid only if the system configuration allows login ID.',
 	},
 	{
-		displayName: 'Contact Email',
+		displayName: 'Email',
 		name: 'contact_email',
 		type: 'string',
 		required: false,
@@ -107,7 +109,7 @@ export const description: SeaAdminUsersProperties = [
 		description: 'The contact email address of the user.',
 	},
 	{
-		displayName: 'ID In Organization',
+		displayName: 'ID in the organization',
 		name: 'id_in_org',
 		type: 'string',
 		required: false,
@@ -119,22 +121,7 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description: 'The team ID of the user, could be a student\'s ID or employee ID. String.',
-	},
-	{
-		displayName: 'Unit',
-		name: 'unit',
-		type: 'string',
-		required: false,
-		placeholder: '',
-		displayOptions: {
-			show: {
-				resource: ['users'],
-				operation: ['update_user'],
-			},
-		},
-		default: '',
-		description: 'Business unit. Only valid if the system configuration allows the feature.',
+		description: "The team ID of the user, could be a student's ID or employee ID.",
 	},
 	{
 		displayName: 'Password',
@@ -152,21 +139,6 @@ export const description: SeaAdminUsersProperties = [
 		description: 'Login password of the user.',
 	},
 	{
-		displayName: 'Institution',
-		name: 'institution',
-		type: 'string',
-		required: false,
-		placeholder: '',
-		displayOptions: {
-			show: {
-				resource: ['users'],
-				operation: ['update_user'],
-			},
-		},
-		default: '',
-		description: 'Institution. Only valid if the system configuration allows the feature.',
-	},
-	{
 		displayName: 'Row Limit',
 		name: 'row_limit',
 		type: 'number',
@@ -179,10 +151,10 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '0',
-		description: 'User\'s total row limit in number. For example 10000.',
+		description: "User's total row limit in number. For example 10000. 0 means unlimited.",
 	},
 	{
-		displayName: 'Quota total',
+		displayName: 'Quota total (in MB)',
 		name: 'quota_total',
 		type: 'string',
 		required: false,
@@ -197,7 +169,7 @@ export const description: SeaAdminUsersProperties = [
 		description: 'Update their total quota in MB.',
 	},
 	{
-		displayName: 'Asset Quota MB',
+		displayName: 'Asset Quota (in MB)',
 		name: 'asset_quota_mb',
 		type: 'string',
 		required: false,
@@ -211,7 +183,4 @@ export const description: SeaAdminUsersProperties = [
 		default: '',
 		description: 'The asset quota in MB.',
 	},
-	
-	
-
 ];

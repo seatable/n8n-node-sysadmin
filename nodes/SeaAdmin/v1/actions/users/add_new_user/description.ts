@@ -58,7 +58,7 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: false,
-		description: 'true or false if the user will be an (system) admin. false by default.',
+		description: 'true or false if the user will be an (system) admin.',
 	},
 	{
 		displayName: 'Active the account',
