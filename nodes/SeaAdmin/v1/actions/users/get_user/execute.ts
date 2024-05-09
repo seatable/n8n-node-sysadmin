@@ -5,17 +5,15 @@ export async function get_user(
 	this: IExecuteFunctions,
 	index: number,
 ): Promise<INodeExecutionData[]> {
-	// get URL
 	const credentials = await this.getCredentials('seaadmin');
 	const baseURL = credentials?.domain || 'https://cloud.seatable.io';
 
-	const user_id = this.getNodeParameter('user_id', index) as string;;
+	const user_id = this.getNodeParameter('user_id', index) as string;
 
 	const options: OptionsWithUri = {
 		method: 'GET',
 		qs: {},
-		body: {
-		},
+		body: {},
 		uri: baseURL + '/api/v2.1/admin/users/' + user_id + '/',
 		json: true,
 	};

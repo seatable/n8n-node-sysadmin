@@ -6,7 +6,7 @@ export const description: SeaAdminUsersProperties = [
 		name: 'email',
 		type: 'string',
 		required: true,
-		placeholder: 'test_email',
+		placeholder: 'me@example.com',
 		displayOptions: {
 			show: {
 				resource: ['users'],
@@ -21,7 +21,7 @@ export const description: SeaAdminUsersProperties = [
 		name: 'password',
 		type: 'string',
 		required: true,
-		placeholder: 'password_test',
+		placeholder: '***',
 		displayOptions: {
 			show: {
 				resource: ['users'],
@@ -36,7 +36,7 @@ export const description: SeaAdminUsersProperties = [
 		name: 'name',
 		type: 'string',
 		required: true,
-		placeholder: 'Example User',
+		placeholder: 'Max',
 		displayOptions: {
 			show: {
 				resource: ['users'],
@@ -47,33 +47,31 @@ export const description: SeaAdminUsersProperties = [
 		description: 'Full name of the user.',
 	},
 	{
-		displayName: 'Is Staff',
+		displayName: 'Grant system admin rights',
 		name: 'is_staff',
 		type: 'boolean',
 		required: false,
-		placeholder: 'false',
 		displayOptions: {
 			show: {
 				resource: ['users'],
 				operation: ['add_new_user'],
 			},
 		},
-		default: 'false',
+		default: false,
 		description: 'true or false if the user will be an (system) admin. false by default.',
 	},
 	{
-		displayName: 'Is Active',
+		displayName: 'Active the account',
 		name: 'is_active',
 		type: 'boolean',
 		required: false,
-		placeholder: 'true',
 		displayOptions: {
 			show: {
 				resource: ['users'],
 				operation: ['add_new_user'],
 			},
 		},
-		default: 'true',
-		description: 'true or false if the user could log in. true by default.',
+		default: true,
+		description: 'An active account could be used right away. Login is possible.',
 	},
 ];
