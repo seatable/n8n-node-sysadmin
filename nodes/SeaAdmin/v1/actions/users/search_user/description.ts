@@ -2,11 +2,11 @@ import type { SeaAdminUsersProperties } from '../../Interfaces';
 
 export const description: SeaAdminUsersProperties = [
 	{
-		displayName: 'query',
+		displayName: 'Search query',
 		name: 'query',
 		type: 'string',
-		required: false,
-		placeholder: 'teamuser001@example.com',
+		required: true,
+		placeholder: 'me@example.com',
 		displayOptions: {
 			show: {
 				resource: ['users'],
@@ -14,6 +14,6 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description: 'Enter any query string from the user\'s name, ID, or contact email.',
-	}
+		description: "Enter any query string from the user's name, user id, or contact email.",
+	},
 ];

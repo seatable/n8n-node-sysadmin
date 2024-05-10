@@ -2,7 +2,7 @@ import type { SeaAdminUsersProperties } from '../../Interfaces';
 
 export const description: SeaAdminUsersProperties = [
 	{
-		displayName: 'User-Account',
+		displayName: 'User ID',
 		name: 'user_id',
 		type: 'string',
 		required: true,
