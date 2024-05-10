@@ -183,4 +183,16 @@ export const description: SeaAdminUsersProperties = [
 		default: '',
 		description: 'The asset quota in MB.',
 	},
+	{
+		displayName: 'Hint: If the input is empty, the values will not be changed.',
+		name: 'notice',
+		type: 'notice',
+		default: '',
+		displayOptions: {
+			show: {
+				resource: ['users'],
+				operation: ['update_user'],
+			},
+		},
+	},
 ];

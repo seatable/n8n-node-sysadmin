@@ -14,7 +14,7 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: '1',
-		description: '',
+		description: 'The page number you want to start showing the entries.',
 	},
 	{
 		displayName: 'Per Page',
@@ -29,7 +29,7 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: '25',
-		description: 'Number of entries to be shown',
+		description: 'The number of results that should be returned.',
 	},
 	{
 		displayName: 'Role',
@@ -44,6 +44,6 @@ export const description: SeaAdminTeamProperties = [
 		},
 		required: false,
 		default: '',
-		description: 'Limit the output by role. Return all teams, if no role is selected.',
+		description: 'Limit the output by role. If no role is selected, all teams will be returned.',
 	},
 ];

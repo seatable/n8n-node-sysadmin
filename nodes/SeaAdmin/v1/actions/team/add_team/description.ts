@@ -6,7 +6,7 @@ export const description: SeaAdminTeamProperties = [
 		name: 'org_name',
 		type: 'string',
 		required: true,
-		placeholder: 'Demo Testing',
+		placeholder: '',
 		displayOptions: {
 			show: {
 				resource: ['team'],
@@ -73,8 +73,7 @@ export const description: SeaAdminTeamProperties = [
 				operation: ['add_team'],
 			},
 		},
-		default: '',
-		description:
-			'If a workspace should be automatically created for the user. Optional. false by default.',
+		default: false,
+		description: 'If a workspace should be automatically created for the user.',
 	},
 ];

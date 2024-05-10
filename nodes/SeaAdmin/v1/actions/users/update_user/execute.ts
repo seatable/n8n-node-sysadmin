@@ -18,7 +18,7 @@ export async function update_user(
 	const contact_email = this.getNodeParameter('contact_email', index) as string;
 	const id_in_org = this.getNodeParameter('id_in_org', index) as string;
 	const password = this.getNodeParameter('password', index) as string;
-	const row_limit = this.getNodeParameter('row_limit', index) as number;
+	const row_limit = this.getNodeParameter('row_limit', index) as string;
 	const quota_total = this.getNodeParameter('quota_total', index) as string;
 	const asset_quota_mb = this.getNodeParameter('asset_quota_mb', index) as string;
 
@@ -45,9 +45,9 @@ export async function update_user(
 	checkAndSet(options, password, 'password');
 	checkAndSet(options, quota_total, 'quota_total');
 	checkAndSet(options, asset_quota_mb, 'asset_quota_mb');
+	checkAndSet(options, row_limit, 'row_limit');
 	body.set('is_staff', is_staff);
 	body.set('is_active', is_active);
-	body.set('row_limit', row_limit);
 
 	const responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
 

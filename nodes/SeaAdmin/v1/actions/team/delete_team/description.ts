@@ -2,7 +2,7 @@ import type { SeaAdminTeamProperties } from '../../Interfaces';
 
 export const description: SeaAdminTeamProperties = [
 	{
-		displayName: 'Team-ID (org_id)',
+		displayName: 'Team-ID',
 		name: 'org_id',
 		type: 'number',
 		required: true,
@@ -14,6 +14,6 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: '',
-		description: '',
+		description: 'The ID of your team/organization.',
 	},
 ];

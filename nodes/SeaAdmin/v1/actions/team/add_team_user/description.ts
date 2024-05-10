@@ -2,7 +2,7 @@ import type { SeaAdminTeamProperties } from '../../Interfaces';
 
 export const description: SeaAdminTeamProperties = [
 	{
-		displayName: 'Org Id',
+		displayName: 'Team ID',
 		name: 'org_id',
 		type: 'number',
 		required: true,
@@ -14,14 +14,14 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: '',
-		description: 'The Id of your team/organization. Get it from Get Team',
+		description: 'The ID of your team/organization.',
 	},
 	{
-		displayName: 'Email',
+		displayName: 'E-Mail',
 		name: 'email',
 		type: 'string',
 		required: true,
-		placeholder: 'username',
+		placeholder: 'me@example.com',
 		displayOptions: {
 			show: {
 				resource: ['team'],
@@ -36,7 +36,7 @@ export const description: SeaAdminTeamProperties = [
 		name: 'password',
 		type: 'string',
 		required: true,
-		placeholder: 'password_test',
+		placeholder: '***',
 		displayOptions: {
 			show: {
 				resource: ['team'],
@@ -59,7 +59,7 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: '',
-		description: 'Full name of the User.',
+		description: 'Full name of the user.',
 	},
 	{
 		displayName: 'With Workspace',
@@ -73,7 +73,7 @@ export const description: SeaAdminTeamProperties = [
 				operation: ['add_team_user'],
 			},
 		},
-		default: '',
-		description: 'If a workspace should be automatically created for the user. Optional. false by default.',
-	}	
+		default: false,
+		description: 'If a workspace should be automatically created for the user.',
+	},
 ];
