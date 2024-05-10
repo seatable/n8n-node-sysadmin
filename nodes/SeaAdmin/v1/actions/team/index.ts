@@ -6,10 +6,9 @@ import * as add_team from './add_team';
 
 import * as add_team_user from './add_team_user';
 
-
 import type { INodeProperties } from 'n8n-workflow';
 
-export { add_team_user,add_team,list_teams, delete_team, list_team_users, delete_team_user };
+export { add_team_user, add_team, list_teams, delete_team, list_team_users, delete_team_user };
 
 export const descriptions: INodeProperties[] = [
 	{
@@ -24,41 +23,35 @@ export const descriptions: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'List Teams',
+				name: 'List teams',
 				value: 'list_teams',
-				description: 'Returns all teams.',
-				action: 'List Teams',
+				description: 'Return all teams of the SeaTable server.',
 			},
 			{
 				name: 'Delete a team',
 				value: 'delete_team',
-				description: 'Deletes a team and all users.',
-				action: 'Delete a Team',
+				description: "Delete a team and all it's users.",
 			},
 			{
 				name: 'List teams users',
 				value: 'list_team_users',
-				description: 'Returns all users of a team.',
-				action: 'List Teams Users',
+				description: 'Return all users of a team.',
 			},
 			{
 				name: 'Delete a team user',
 				value: 'delete_team_user',
-				description: 'Deletes a team user.',
-				action: 'Delete a Team User',
+				description: 'Delete a team user.',
 			},
 			{
 				name: 'Add a team',
 				value: 'add_team',
-				description: 'Adds a new Team.',
-				action: 'Add a new Team'
-			},			
+				description: 'Add a new Team.',
+			},
 			{
 				name: 'Add a team user',
 				value: 'add_team_user',
-				description: 'Adds a new Team user.',
-				action: 'Add a new Team user'
-			}
+				description: 'Add a new Team user.',
+			},
 		],
 		default: 'list_teams',
 	},
@@ -67,6 +60,5 @@ export const descriptions: INodeProperties[] = [
 	...list_team_users.description,
 	...delete_team_user.description,
 	...add_team.description,
-	...add_team_user.description
-
+	...add_team_user.description,
 ];

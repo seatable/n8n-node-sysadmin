@@ -20,14 +20,12 @@ export const descriptions: INodeProperties[] = [
 			{
 				name: 'List all bases',
 				value: 'list_all_bases',
-				description: 'Lists all bases of the SeaTable server.',
-				action: 'Lists all bases of the SeaTable server.',
+				description: 'List all bases of the SeaTable server.',
 			},
 			{
 				name: 'List all bases from a user',
 				value: 'list_users_bases',
 				description: "List all the bases of a certain user by the user's ID.",
-				action: "List all the bases of a certain user by the user's ID.",
 			},
 		],
 		default: 'list_all_bases',

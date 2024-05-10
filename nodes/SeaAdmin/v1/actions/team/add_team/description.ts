@@ -2,7 +2,7 @@ import type { SeaAdminTeamProperties } from '../../Interfaces';
 
 export const description: SeaAdminTeamProperties = [
 	{
-		displayName: 'Team Name',
+		displayName: 'Name of the team',
 		name: 'org_name',
 		type: 'string',
 		required: true,
@@ -74,6 +74,7 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: '',
-		description: 'If a workspace should be automatically created for the user. Optional. false by default.',
-	}	
+		description:
+			'If a workspace should be automatically created for the user. Optional. false by default.',
+	},
 ];

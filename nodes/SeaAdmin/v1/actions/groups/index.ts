@@ -17,10 +17,10 @@ export const descriptions: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'List Groups',
+				name: 'List groups',
 				value: 'list_groups',
-				description: 'Shows a list of all groups of the system. You can also search for a group by his name.',
-				action: 'Show a list of all groups of the system. You can also search for a group by his name.',
+				description:
+					'Show a list of all groups of the system or search for a specific group by name.',
 			},
 		],
 		default: 'list_groups',

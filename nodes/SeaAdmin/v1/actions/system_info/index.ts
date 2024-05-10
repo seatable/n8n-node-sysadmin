@@ -1,6 +1,5 @@
 import type { INodeProperties } from 'n8n-workflow';
-import * as get_system_info from './get_system_info'; 
-
+import * as get_system_info from './get_system_info';
 
 export { get_system_info };
 
@@ -17,15 +16,12 @@ export const descriptions: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Get System Information',
+				name: 'Get system information',
 				value: 'get_system_info',
-				description: 'Gets the System Information of Seatable',
-				action: 'get System Information',
+				description: 'Get more information of the SeaTable Server.',
 			},
-			
 		],
 		default: '',
 	},
 	...get_system_info.description,
-
 ];

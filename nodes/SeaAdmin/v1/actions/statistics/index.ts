@@ -3,7 +3,7 @@ import * as get_active_users_per_day from './get_active_users_per_day';
 
 import type { INodeProperties } from 'n8n-workflow';
 
-export { get_active_users_per_day,list_active_users };
+export { get_active_users_per_day, list_active_users };
 
 export const descriptions: INodeProperties[] = [
 	{
@@ -18,20 +18,18 @@ export const descriptions: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'List Active Users (one day)',
+				name: 'List active users of one day',
 				value: 'list_active_users',
-				description: 'Returns all active users of one specific day.',
-				action: 'List Active Users (one day)',
+				description: 'Return all active users of one specific day.',
 			},
 			{
-				name: 'Get Active Users (per day)',
+				name: 'Get active users per day',
 				value: 'get_active_users_per_day',
-				description: 'Returns all active users of one specific day.',
-				action: 'List Active Users (one day)',
+				description: 'Return the number of active users in a period of time.',
 			},
 		],
 		default: 'list_active_users',
 	},
 	...list_active_users.description,
-	...get_active_users_per_day.description
+	...get_active_users_per_day.description,
 ];
