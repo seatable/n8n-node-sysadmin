@@ -4,17 +4,17 @@ export const description: SeaAdminStatisticsProperties = [
 	{
 		displayName: 'Date',
 		name: 'date',
-		type: 'string',
+		type: 'dateTime',
 		required: true,
-		placeholder: '2023-06-19 00:00:00',
+		placeholder: '2024-06-19 00:00:00',
 		displayOptions: {
 			show: {
 				resource: ['statistics'],
 				operation: ['list_active_users'],
 			},
 		},
-		default: '2020-06-19 00:00:00',
-		description: 'The date in ISO format.',
+		default: '',
+		description: 'The date in ISO format like 2024-02-20 00:00:00.',
 	},
 	{
 		displayName: 'Page',
@@ -29,7 +29,7 @@ export const description: SeaAdminStatisticsProperties = [
 			},
 		},
 		default: '1',
-		description: '',
+		description: 'The page number you want to start showing the entries.',
 	},
 	{
 		displayName: 'Per Page',
@@ -44,6 +44,6 @@ export const description: SeaAdminStatisticsProperties = [
 			},
 		},
 		default: '25',
-		description: 'Number of entries to be shown.',
+		description: 'The number of results that should be returned.',
 	},
 ];

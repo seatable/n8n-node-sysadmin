@@ -13,7 +13,7 @@ export const description: SeaAdminTeamProperties = [
 				operation: ['list_team_users'],
 			},
 		},
-		default: '1',
+		default: '',
 		description: 'The ID of your team/organization.',
 	},
 ];

@@ -16,11 +16,11 @@ export async function add_new_user(
 	const is_active = this.getNodeParameter('is_active', index) as boolean;
 
 	let body: FormData = new FormData();
-	body.set('email', email);
-	body.set('password', password);
-	body.set('name', name);
-	body.set('is_staff', is_staff);
-	body.set('is_active', is_active);
+	body.append('email', email);
+	body.append('password', password);
+	body.append('name', name);
+	body.append('is_staff', is_staff);
+	body.append('is_active', is_active);
 
 	const options: OptionsWithUri = {
 		method: 'POST',

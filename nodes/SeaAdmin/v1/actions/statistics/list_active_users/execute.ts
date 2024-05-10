@@ -19,7 +19,7 @@ export async function list_active_users(
 		qs: {
 			page: page,
 			per_page: per_page,
-			date: date,
+			date: date.replace('T', ' '),
 		},
 		body: {},
 		uri: baseURL + '/api/v2.1/admin/daily-active-users/',

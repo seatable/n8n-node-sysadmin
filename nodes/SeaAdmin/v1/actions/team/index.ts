@@ -5,6 +5,7 @@ import * as delete_team_user from './delete_team_user';
 import * as add_team from './add_team';
 import * as update_team from './update_team';
 import * as add_team_user from './add_team_user';
+import * as update_team_user from './update_team_user';
 
 import type { INodeProperties } from 'n8n-workflow';
 
@@ -16,6 +17,7 @@ export {
 	list_team_users,
 	delete_team_user,
 	update_team,
+	update_team_user,
 };
 
 export const descriptions: INodeProperties[] = [
@@ -56,9 +58,14 @@ export const descriptions: INodeProperties[] = [
 				description: 'Return all users of a team.',
 			},
 			{
-				name: 'Add a team user',
+				name: 'Add team user',
 				value: 'add_team_user',
 				description: 'Add a new team user.',
+			},
+			{
+				name: 'Update team user',
+				value: 'update_team_user',
+				description: 'Update an existing team user.',
 			},
 			{
 				name: 'Delete a team user',
@@ -74,5 +81,6 @@ export const descriptions: INodeProperties[] = [
 	...delete_team.description,
 	...list_team_users.description,
 	...add_team_user.description,
+	...update_team_user.description,
 	...delete_team_user.description,
 ];

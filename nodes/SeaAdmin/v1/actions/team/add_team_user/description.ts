@@ -6,18 +6,18 @@ export const description: SeaAdminTeamProperties = [
 		name: 'org_id',
 		type: 'number',
 		required: true,
-		placeholder: 'Demo Testing',
+		placeholder: '1',
 		displayOptions: {
 			show: {
 				resource: ['team'],
 				operation: ['add_team_user'],
 			},
 		},
-		default: '',
+		default: '1',
 		description: 'The ID of your team/organization.',
 	},
 	{
-		displayName: 'E-Mail',
+		displayName: 'Email',
 		name: 'email',
 		type: 'string',
 		required: true,

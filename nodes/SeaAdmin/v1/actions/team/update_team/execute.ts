@@ -27,7 +27,7 @@ export async function update_team(
 
 	function checkAndSet(options: OptionsWithUri, body_variable: string, key: string) {
 		if (body_variable !== '') {
-			body.set(key, body_variable);
+			body.append(key, body_variable);
 		}
 	}
 

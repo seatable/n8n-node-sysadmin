@@ -5,7 +5,6 @@ export async function add_team_user(
 	this: IExecuteFunctions,
 	index: number,
 ): Promise<INodeExecutionData[]> {
-	// get URL
 	const credentials = await this.getCredentials('seaadmin');
 	const baseURL = credentials?.domain || 'https://cloud.seatable.io';
 
@@ -16,19 +15,26 @@ export async function add_team_user(
 	const with_workspace = this.getNodeParameter('with_workspace', index) as boolean;
 
 	let body: FormData = new FormData();
-	body.set('email', email);
-	body.set('password', password);
-	body.set('name', name);
-	body.set('with_workspace', with_workspace);
+	body.append('email', email);
+	body.append('password', password);
+	body.append('name', name);
+	body.append('with_workspace', with_workspace);
 
 	const options: OptionsWithUri = {
+		headers: {
+			Accept: 'application/json',
+		},
 		method: 'POST',
 		qs: {},
 		body,
 		uri: baseURL + '/api/v2.1/admin/organizations/' + org_id + '/users/',
-		json: true,
+		json: false,
 	};
-	const responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
+	// I have absolutely no idea, why this has to be json: false.
+	// With json: true, this call is not working.
+
+	let responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
+	responseData = JSON.parse(responseData);
 
 	return this.helpers.returnJsonArray(responseData as IDataObject[]);
 }
