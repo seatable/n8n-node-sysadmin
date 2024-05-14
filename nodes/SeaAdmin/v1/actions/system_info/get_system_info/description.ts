@@ -1,5 +1,3 @@
-import type {SeaAdminSystemInfoProperties } from '../../Interfaces';
+import type { SeaAdminSystemInfoProperties } from '../../Interfaces';
 
-export const description: SeaAdminSystemInfoProperties = [
-
-];
+export const description: SeaAdminSystemInfoProperties = [];

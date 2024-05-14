@@ -19,7 +19,7 @@ export async function list_groups(
 		qs: {
 			page: page,
 			per_page: per_page,
-            name:name
+			name: name,
 		},
 		body: {},
 		uri: baseURL + '/api/v2.1/admin/groups/',

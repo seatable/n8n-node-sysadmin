@@ -15,16 +15,15 @@ export async function add_team(
 	const admin_name = this.getNodeParameter('admin_name', index) as string;
 	const with_workspace = this.getNodeParameter('with_workspace', index) as boolean;
 
-
 	const options: OptionsWithUri = {
 		method: 'POST',
 		qs: {},
 		body: {
-			org_name:org_name,
-			admin_email:admin_email,
-			password:password,
-			admin_name:admin_name,
-			with_workspace:with_workspace
+			org_name: org_name,
+			admin_email: admin_email,
+			password: password,
+			admin_name: admin_name,
+			with_workspace: with_workspace,
 		},
 		uri: baseURL + '/api/v2.1/admin/organizations/',
 		json: true,

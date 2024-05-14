@@ -14,10 +14,8 @@ export async function list_users(
 
 	const options: OptionsWithUri = {
 		method: 'GET',
-		qs: {page:page,per_page:per_page},
-		body: {
-			
-		},
+		qs: { page: page, per_page: per_page },
+		body: {},
 		uri: baseURL + '/api/v2.1/admin/users/',
 		json: true,
 	};
