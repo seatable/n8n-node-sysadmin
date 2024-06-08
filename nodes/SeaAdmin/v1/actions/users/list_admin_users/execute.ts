@@ -12,8 +12,7 @@ export async function list_admin_users(
 	const options: OptionsWithUri = {
 		method: 'GET',
 		qs: {},
-		body: {
-		},
+		body: {},
 		uri: baseURL + '/api/v2.1/admin/admin-users/',
 		json: true,
 	};

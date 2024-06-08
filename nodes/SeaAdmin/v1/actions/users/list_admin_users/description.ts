@@ -1,5 +1,3 @@
 import type { SeaAdminUsersProperties } from '../../Interfaces';
 
-export const description: SeaAdminUsersProperties = [
-
-];
+export const description: SeaAdminUsersProperties = [];
