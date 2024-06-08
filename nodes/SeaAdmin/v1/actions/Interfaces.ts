@@ -21,7 +21,7 @@ type SeaAdminMap = {
 		| 'search_user'
 		| 'search_user_org_id';
 	system_info: 'get_system_info';
-	bases: 'list_all_bases' | 'list_users_bases';
+	bases: 'list_all_bases' | 'list_users_bases' | 'export_base';
 	groups: 'list_groups';
 };
 

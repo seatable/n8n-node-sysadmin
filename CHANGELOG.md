@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.0 (2024-06-08)
+
+Adding endpoint "Export Base"
+
 ## v1.0.0 (2024-05-08)
 
 Adding additional endpoints for
