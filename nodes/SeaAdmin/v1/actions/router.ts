@@ -6,6 +6,7 @@ import * as users from './users';
 import * as system_info from './system_info';
 import * as bases from './bases';
 import * as groups from './groups';
+import * as logs from './logs';
 
 import { SeaAdmin } from './Interfaces';
 
@@ -39,6 +40,8 @@ export async function router(this: IExecuteFunctions): Promise<INodeExecutionDat
 				responseData = await statistics[seaadmin.operation].execute.call(this, i);
 			} else if (seaadmin.resource === 'system_info') {
 				responseData = await system_info[seaadmin.operation].execute.call(this, i);
+			} else if (seaadmin.resource === 'logs') {
+				responseData = await logs[seaadmin.operation].execute.call(this, i);
 			}
 
 			const executionData = this.helpers.constructExecutionMetaData(

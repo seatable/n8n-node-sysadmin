@@ -23,6 +23,7 @@ type SeaAdminMap = {
 	system_info: 'get_system_info';
 	bases: 'list_all_bases' | 'list_users_bases' | 'export_base';
 	groups: 'list_groups';
+	logs: 'list_abuse_reports' | 'list_email_logs' | 'list_login_logs' | 'list_registration_logs';
 };
 
 export type SeaAdmin = AllEntities<SeaAdminMap>;
@@ -33,6 +34,7 @@ export type SeaAdminUsers = Entity<SeaAdminMap, 'users'>;
 export type SeaAdminSystemInfo = Entity<SeaAdminMap, 'system_info'>;
 export type SeaAdminBases = Entity<SeaAdminMap, 'bases'>;
 export type SeaAdminGroups = Entity<SeaAdminMap, 'groups'>;
+export type SeaAdminLogs = Entity<SeaAdminMap, 'logs'>;
 
 export type SeaAdminTeamProperties = PropertiesOf<SeaAdminTeam>;
 export type SeaAdminStatisticsProperties = PropertiesOf<SeaAdminStatistics>;
@@ -40,3 +42,4 @@ export type SeaAdminUsersProperties = PropertiesOf<SeaAdminUsers>;
 export type SeaAdminSystemInfoProperties = PropertiesOf<SeaAdminSystemInfo>;
 export type SeaAdminBasesProperties = PropertiesOf<SeaAdminBases>;
 export type SeaAdminGroupsProperties = PropertiesOf<SeaAdminGroups>;
+export type SeaAdminLogsProperties = PropertiesOf<SeaAdminLogs>;

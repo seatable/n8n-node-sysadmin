@@ -6,6 +6,7 @@ import * as users from './users';
 import * as system_info from './system_info';
 import * as bases from './bases';
 import * as groups from './groups';
+import * as logs from './logs';
 
 export const versionDescription: INodeTypeDescription = {
 	displayName: 'SeaTable Sys-Admin',
@@ -57,6 +58,10 @@ export const versionDescription: INodeTypeDescription = {
 					name: 'Statistics',
 					value: 'statistics',
 				},
+				{
+					name: 'Logs',
+					value: 'logs',
+				},
 			],
 			default: 'system_info',
 		},
@@ -66,5 +71,6 @@ export const versionDescription: INodeTypeDescription = {
 		...users.descriptions,
 		...team.descriptions,
 		...statistics.descriptions,
+		...logs.descriptions,
 	],
 };
