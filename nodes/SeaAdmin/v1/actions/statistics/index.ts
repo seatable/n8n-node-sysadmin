@@ -21,11 +21,13 @@ export const descriptions: INodeProperties[] = [
 				name: 'List active users of one day',
 				value: 'list_active_users',
 				description: 'Return all active users of one specific day.',
+				action: 'List active users of one day',
 			},
 			{
 				name: 'Get active users per day',
 				value: 'get_active_users_per_day',
 				description: 'Return the number of active users in a period of time.',
+				action: 'Get active users per day',
 			},
 		],
 		default: 'list_active_users',

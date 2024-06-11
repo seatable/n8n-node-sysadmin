@@ -18,7 +18,8 @@ export const descriptions: INodeProperties[] = [
 			{
 				name: 'Get system information',
 				value: 'get_system_info',
-				description: 'Get more information of the SeaTable Server.',
+				description: 'Gets more information about the SeaTable Server.',
+				action: 'Get system information',
 			},
 		],
 		default: '',
