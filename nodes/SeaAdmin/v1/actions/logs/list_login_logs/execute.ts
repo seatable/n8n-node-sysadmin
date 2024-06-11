@@ -20,7 +20,7 @@ export async function list_login_logs(
 			per_page: per_page,
 		},
 		body: {},
-		uri: baseURL + '/api/v2.1/admin/login-logs/',
+		uri: baseURL + '/api/v2.1/admin/logs/login-logs/',
 		json: true,
 	};
 
