@@ -1,10 +1,11 @@
 import * as list_all_bases from './list_all_bases';
 import * as list_users_bases from './list_users_bases';
 import * as export_base from './export_base';
+import * as delete_base from './delete_base';
 
 import type { INodeProperties } from 'n8n-workflow';
 
-export { list_all_bases, list_users_bases, export_base };
+export { list_all_bases, list_users_bases, export_base, delete_base };
 
 export const descriptions: INodeProperties[] = [
 	{
@@ -36,10 +37,17 @@ export const descriptions: INodeProperties[] = [
 				description: 'Exports a base as dtable file.',
 				action: 'Export base',
 			},
+			{
+				name: 'Delete base',
+				value: 'delete_base',
+				description: 'Delete a base and move it into the trash.',
+				action: 'Delete base',
+			},
 		],
 		default: 'list_all_bases',
 	},
 	...list_all_bases.description,
 	...list_users_bases.description,
 	...export_base.description,
+	...delete_base.description,
 ];

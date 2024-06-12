@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.2.1 (2024-06-12)
+
+Adding new endpoints:
+
+**Log Actions**
+
+- List Abuse Reports
+- List Email Logs
+- List Login Logs
+- List Registration Logs
+
+**User Actions**
+
+- Reset user password
+
+**Base Actions**
+
+- Delete Base
+
 ## v1.1.0 (2024-06-08)
 
 Adding endpoint "Export Base"

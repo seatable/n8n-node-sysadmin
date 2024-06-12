@@ -42,13 +42,13 @@ export const descriptions: INodeProperties[] = [
 				name: 'Add team',
 				value: 'add_team',
 				description: 'Add a new team.',
-				action: 'Add a team.',
+				action: 'Add a team',
 			},
 			{
 				name: 'Update team',
 				value: 'update_team',
 				description: 'Update an existing team.',
-				action: 'Update a team.',
+				action: 'Update a team',
 			},
 			{
 				name: 'Delete team',
@@ -66,7 +66,7 @@ export const descriptions: INodeProperties[] = [
 				name: 'Add team user',
 				value: 'add_team_user',
 				description: 'Adds a new team user.',
-				action: 'Add a new team user.',
+				action: 'Add a new team user',
 			},
 			{
 				name: 'Update team user',
@@ -78,7 +78,7 @@ export const descriptions: INodeProperties[] = [
 				name: 'Delete a team user',
 				value: 'delete_team_user',
 				description: 'Deletes a team user.',
-				action: 'Delete a team user.',
+				action: 'Delete a team user',
 			},
 		],
 		default: 'list_teams',

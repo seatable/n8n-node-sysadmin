@@ -39,15 +39,15 @@ export const versionDescription: INodeTypeDescription = {
 					value: 'system_info',
 				},
 				{
-					name: 'Bases',
+					name: 'Base',
 					value: 'bases',
 				},
 				{
-					name: 'Groups',
+					name: 'Group',
 					value: 'groups',
 				},
 				{
-					name: 'Users',
+					name: 'User',
 					value: 'users',
 				},
 				{
@@ -55,11 +55,11 @@ export const versionDescription: INodeTypeDescription = {
 					value: 'team',
 				},
 				{
-					name: 'Statistics',
+					name: 'Statistic',
 					value: 'statistics',
 				},
 				{
-					name: 'Logs',
+					name: 'Log',
 					value: 'logs',
 				},
 			],

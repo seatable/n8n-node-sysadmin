@@ -7,6 +7,7 @@ import * as list_admin_users from './list_admin_users';
 import * as update_user from './update_user';
 import * as search_user from './search_user';
 import * as search_user_org_id from './search_user_org_id';
+import * as reset_user_password from './reset_user_password';
 export {
 	update_user,
 	list_users,
@@ -16,6 +17,7 @@ export {
 	list_admin_users,
 	search_user,
 	search_user_org_id,
+	reset_user_password,
 };
 
 export const descriptions: INodeProperties[] = [
@@ -37,16 +39,16 @@ export const descriptions: INodeProperties[] = [
 				action: 'List users',
 			},
 			{
-				name: 'Get user',
-				value: 'get_user',
-				description: 'Gets all information about a specific user.',
-				action: 'Get user',
-			},
-			{
 				name: 'List admin users',
 				value: 'list_admin_users',
 				description: 'Gets a list of all user with sys-admin permissions.',
 				action: 'List admin users',
+			},
+			{
+				name: 'Get user',
+				value: 'get_user',
+				description: 'Gets all information about a specific user.',
+				action: 'Get user',
 			},
 			{
 				name: 'Add user',
@@ -67,7 +69,7 @@ export const descriptions: INodeProperties[] = [
 				action: 'Delete user',
 			},
 			{
-				name: 'Search users',
+				name: 'Search user(s)',
 				value: 'search_user',
 				description: 'Searches for one or multiple users via query',
 				action: 'Search users',
@@ -77,6 +79,13 @@ export const descriptions: INodeProperties[] = [
 				value: 'search_user_org_id',
 				description: 'Searches for one or multiple users of a specific team.',
 				action: 'Search team users',
+			},
+			{
+				name: 'Reset user password',
+				value: 'reset_user_password',
+				description:
+					'Reset the password of a user and send an email with a new password (if configured)',
+				action: 'Reset user password',
 			},
 		],
 		default: '',
@@ -89,4 +98,5 @@ export const descriptions: INodeProperties[] = [
 	...update_user.description,
 	...search_user.description,
 	...search_user_org_id.description,
+	...reset_user_password.description,
 ];

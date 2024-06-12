@@ -19,9 +19,10 @@ type SeaAdminMap = {
 		| 'list_admin_users'
 		| 'update_user'
 		| 'search_user'
-		| 'search_user_org_id';
+		| 'search_user_org_id'
+		| 'reset_user_password';
 	system_info: 'get_system_info';
-	bases: 'list_all_bases' | 'list_users_bases' | 'export_base';
+	bases: 'list_all_bases' | 'list_users_bases' | 'export_base' | 'delete_base';
 	groups: 'list_groups';
 	logs: 'list_abuse_reports' | 'list_email_logs' | 'list_login_logs' | 'list_registration_logs';
 };
