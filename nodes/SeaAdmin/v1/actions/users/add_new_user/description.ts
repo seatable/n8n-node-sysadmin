@@ -14,12 +14,13 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description: 'Login email of the user.',
+		description: 'Login email of the user',
 	},
 	{
 		displayName: 'Password',
 		name: 'password',
 		type: 'string',
+		typeOptions: { password: true },
 		required: true,
 		placeholder: '***',
 		displayOptions: {
@@ -29,7 +30,7 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description: 'Login password of the user.',
+		description: 'Login password of the user',
 	},
 	{
 		displayName: 'Name',
@@ -44,13 +45,12 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description: 'Full name of the user.',
+		description: 'Full name of the user',
 	},
 	{
-		displayName: 'Grant system admin rights',
+		displayName: 'Grant System Admin Rights',
 		name: 'is_staff',
 		type: 'boolean',
-		required: false,
 		displayOptions: {
 			show: {
 				resource: ['users'],
@@ -58,13 +58,12 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: false,
-		description: 'true or false if the user will be an (system) admin.',
+		description: 'Whether the user will be an (system) admin',
 	},
 	{
-		displayName: 'Active the account',
+		displayName: 'Active the Account',
 		name: 'is_active',
 		type: 'boolean',
-		required: false,
 		displayOptions: {
 			show: {
 				resource: ['users'],
@@ -72,6 +71,7 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: true,
-		description: 'An active account could be used right away. Login is possible.',
+		description:
+			'Whether the account is activated right away and the login is possible (true) or the account is created but not activated (false)',
 	},
 ];

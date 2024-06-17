@@ -2,7 +2,7 @@ import type { SeaAdminUsersProperties } from '../../Interfaces';
 
 export const description: SeaAdminUsersProperties = [
 	{
-		displayName: 'Search query',
+		displayName: 'Search Query',
 		name: 'query',
 		type: 'string',
 		required: true,
@@ -14,7 +14,7 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description: "Enter any query string from the user's name, ID, or contact email.",
+		description: "Enter any query string from the user's name, ID, or contact email",
 	},
 	{
 		displayName: 'Organization ID / Team ID',
@@ -28,14 +28,16 @@ export const description: SeaAdminUsersProperties = [
 				operation: ['search_user_org_id'],
 			},
 		},
-		default: '1',
+		default: '',
 		description: 'Search for user in a specific organization/team with specified org_id',
 	},
 	{
-		displayName: 'limit',
+		displayName: 'Limit',
 		name: 'limit',
 		type: 'number',
-		required: false,
+		typeOptions: {
+			minValue: 1,
+		},
 		placeholder: '100',
 		displayOptions: {
 			show: {
@@ -43,7 +45,7 @@ export const description: SeaAdminUsersProperties = [
 				operation: ['search_user_org_id'],
 			},
 		},
-		default: '10',
-		description: 'Limit the amount of results',
+		default: 50,
+		description: 'Max number of results to return',
 	},
 ];

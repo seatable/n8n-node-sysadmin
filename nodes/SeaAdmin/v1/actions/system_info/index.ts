@@ -16,13 +16,13 @@ export const descriptions: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Get system information',
+				name: 'Get System Information',
 				value: 'get_system_info',
-				description: 'Gets more information about the SeaTable Server.',
+				description: 'Gets more information about the SeaTable Server',
 				action: 'Get system information',
 			},
 		],
-		default: '',
+		default: 'get_system_info',
 	},
 	...get_system_info.description,
 ];

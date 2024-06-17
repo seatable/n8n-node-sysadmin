@@ -17,10 +17,9 @@ export const descriptions: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'List groups',
+				name: 'List Groups',
 				value: 'list_groups',
-				description:
-					'Shows a list of all groups of the system or search for a specific group by name.',
+				description: 'Shows a list of all groups of the system or search for a specific group by name',
 				action: 'List groups',
 			},
 		],

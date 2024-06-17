@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.3.0 (2024-06-17)
+
+Fixing all lint errors
+
 ## v1.2.1 (2024-06-12)
 
 Adding new endpoints:

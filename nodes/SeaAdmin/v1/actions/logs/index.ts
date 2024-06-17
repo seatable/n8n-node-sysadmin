@@ -22,31 +22,30 @@ export const descriptions: INodeProperties[] = [
 			{
 				name: 'List Abuse Reports',
 				value: 'list_abuse_reports',
-				description:
-					'As system administrator, use this API request to list current abuse reports in the system.',
-				action: 'List Abuse Reports',
+				description: 'As system administrator, use this API request to list current abuse reports in the system',
+				action: 'List abuse reports',
 			},
 			{
 				name: 'List Email Logs',
 				value: 'list_email_logs',
 				description:
 					'List the email sending logs in the system. The emails sent via 3rd party email accounts are listed here.',
-				action: 'List Email Logs',
+				action: 'List email logs',
 			},
 			{
 				name: 'List Login Logs',
 				value: 'list_login_logs',
-				description: 'List the logins of all users in the system.',
-				action: 'List Login Logs',
+				description: 'List the logins of all users in the system',
+				action: 'List login logs',
 			},
 			{
 				name: 'List Registration Logs',
 				value: 'list_registration_logs',
 				description: 'Lists Registration Logs',
-				action: 'List Registration Logs',
+				action: 'List registration logs',
 			},
 		],
-		default: 'list_groups',
+		default: 'list_abuse_reports',
 	},
 	...list_abuse_reports.description,
 	...list_email_logs.description,

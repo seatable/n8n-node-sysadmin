@@ -20,7 +20,6 @@ export const description: SeaAdminBasesProperties = [
 		displayName: 'Exported File Name',
 		name: 'file_name',
 		type: 'string',
-		required: false,
 		placeholder: 'export.dtable',
 		displayOptions: {
 			show: {
@@ -36,7 +35,6 @@ export const description: SeaAdminBasesProperties = [
 		displayName: 'Ignore Assets',
 		name: 'ignore_asset',
 		type: 'boolean',
-		required: false,
 		placeholder: 'false',
 		displayOptions: {
 			show: {
@@ -45,6 +43,6 @@ export const description: SeaAdminBasesProperties = [
 			},
 		},
 		default: false,
-		description: 'Set this to true to export the base without assets. Default is false.',
+		description: 'Whether export the base without assets (true) or with assets (false)',
 	},
 ];

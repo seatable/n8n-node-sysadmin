@@ -14,7 +14,7 @@ export const description: SeaAdminStatisticsProperties = [
 			},
 		},
 		default: '',
-		description: 'The Start date in ISO format like 2024-02-20 00:00:00.',
+		description: 'The Start date in ISO format like 2024-02-20 00:00:00',
 	},
 	{
 		displayName: 'End Date',
@@ -29,6 +29,6 @@ export const description: SeaAdminStatisticsProperties = [
 			},
 		},
 		default: '',
-		description: 'The End date in ISO format like 2024-02-20 00:00:00.',
+		description: 'The End date in ISO format like 2024-02-20 00:00:00',
 	},
 ];

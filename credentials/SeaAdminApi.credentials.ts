@@ -6,7 +6,7 @@ import type {
 } from 'n8n-workflow';
 
 export class SeaAdminApi implements ICredentialType {
-	name = 'seaadmin';
+	name = 'seaadminApi';
 	displayName = 'SeaTable Sys-Admin API';
 	documentationUrl = 'https://api.seatable.io/';
 	properties: INodeProperties[] = [

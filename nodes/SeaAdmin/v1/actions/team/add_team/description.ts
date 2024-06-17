@@ -2,7 +2,7 @@ import type { SeaAdminTeamProperties } from '../../Interfaces';
 
 export const description: SeaAdminTeamProperties = [
 	{
-		displayName: 'Name of the team',
+		displayName: 'Name of the Team',
 		name: 'org_name',
 		type: 'string',
 		required: true,
@@ -14,10 +14,10 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: '',
-		description: 'Name of the team. Required. ',
+		description: 'Name of the team. Required.',
 	},
 	{
-		displayName: 'Admin email',
+		displayName: 'Admin Email',
 		name: 'admin_email',
 		type: 'string',
 		required: true,
@@ -35,6 +35,7 @@ export const description: SeaAdminTeamProperties = [
 		displayName: 'Password',
 		name: 'password',
 		type: 'string',
+		typeOptions: { password: true },
 		required: true,
 		placeholder: 'password_test',
 		displayOptions: {
@@ -44,13 +45,12 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: '',
-		description: 'Login password of the user.',
+		description: 'Login password of the user',
 	},
 	{
 		displayName: 'Admin Name',
 		name: 'admin_name',
 		type: 'string',
-		required: false,
 		placeholder: 'Max Mustermann',
 		displayOptions: {
 			show: {
@@ -65,7 +65,6 @@ export const description: SeaAdminTeamProperties = [
 		displayName: 'With Workspace',
 		name: 'with_workspace',
 		type: 'boolean',
-		required: false,
 		placeholder: 'false',
 		displayOptions: {
 			show: {
@@ -74,6 +73,7 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: false,
-		description: 'If a workspace should be automatically created for the user.',
+		description:
+			'Whether the workspace should be automatically created for the user (true) or not (false)',
 	},
 ];

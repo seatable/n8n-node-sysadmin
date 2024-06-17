@@ -14,6 +14,6 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: '',
-		description: 'The ID of your team/organization.',
+		description: 'The ID of your team/organization',
 	},
 ];

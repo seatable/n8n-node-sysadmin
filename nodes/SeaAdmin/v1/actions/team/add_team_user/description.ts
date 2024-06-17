@@ -13,8 +13,8 @@ export const description: SeaAdminTeamProperties = [
 				operation: ['add_team_user'],
 			},
 		},
-		default: '1',
-		description: 'The ID of your team/organization.',
+		default: 0,
+		description: 'The ID of your team/organization',
 	},
 	{
 		displayName: 'Email',
@@ -35,6 +35,7 @@ export const description: SeaAdminTeamProperties = [
 		displayName: 'Password',
 		name: 'password',
 		type: 'string',
+		typeOptions: { password: true },
 		required: true,
 		placeholder: '***',
 		displayOptions: {
@@ -44,7 +45,7 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: '',
-		description: 'Login password of the user.',
+		description: 'Login password of the user',
 	},
 	{
 		displayName: 'Name',
@@ -59,13 +60,12 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: '',
-		description: 'Full name of the user.',
+		description: 'Full name of the user',
 	},
 	{
 		displayName: 'With Workspace',
 		name: 'with_workspace',
 		type: 'boolean',
-		required: false,
 		placeholder: 'false',
 		displayOptions: {
 			show: {
@@ -74,6 +74,7 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: false,
-		description: 'If a workspace should be automatically created for the user.',
+		description:
+			'Whether the workspace should be automatically created for the user (true) or not (false)',
 	},
 ];

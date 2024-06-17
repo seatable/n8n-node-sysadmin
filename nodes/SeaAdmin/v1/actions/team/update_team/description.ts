@@ -14,13 +14,12 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: '',
-		description: 'The ID of your team/organization.',
+		description: 'The ID of your team/organization',
 	},
 	{
-		displayName: 'New name of the team',
+		displayName: 'New Name of the Team',
 		name: 'org_name',
 		type: 'string',
-		required: false,
 		placeholder: 'Team ABC',
 		displayOptions: {
 			show: {
@@ -42,15 +41,13 @@ export const description: SeaAdminTeamProperties = [
 				operation: ['update_team'],
 			},
 		},
-		required: false,
 		default: '',
-		description: 'Name of the role that will be assigned to the team.',
+		description: 'Name of the role that will be assigned to the team',
 	},
 	{
 		displayName: 'Row Limit',
 		name: 'row_limit',
 		type: 'string',
-		required: false,
 		placeholder: '',
 		displayOptions: {
 			show: {
@@ -62,10 +59,9 @@ export const description: SeaAdminTeamProperties = [
 		description: "User's total row limit in number. For example 10000. 0 means unlimited.",
 	},
 	{
-		displayName: 'Maximum team size',
+		displayName: 'Maximum Team Size',
 		name: 'max_user_number',
 		type: 'string',
-		required: false,
 		placeholder: '',
 		displayOptions: {
 			show: {
@@ -74,13 +70,12 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: '',
-		description: 'The maximum number of users in this team.',
+		description: 'The maximum number of users in this team',
 	},
 	{
 		displayName: 'Asset Quota (in MB)',
 		name: 'asset_quota_mb',
 		type: 'string',
-		required: false,
 		placeholder: '',
 		displayOptions: {
 			show: {
@@ -89,7 +84,7 @@ export const description: SeaAdminTeamProperties = [
 			},
 		},
 		default: '',
-		description: 'The asset quota in MB.',
+		description: 'The asset quota in MB',
 	},
 	{
 		displayName: 'Hint: If the input is empty, the values will not be changed.',

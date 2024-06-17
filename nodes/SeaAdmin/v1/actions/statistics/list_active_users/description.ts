@@ -14,7 +14,7 @@ export const description: SeaAdminStatisticsProperties = [
 			},
 		},
 		default: '',
-		description: 'The date in ISO format like 2024-02-20 00:00:00.',
+		description: 'The date in ISO format like 2024-02-20 00:00:00',
 	},
 	{
 		displayName: 'Page',
@@ -28,8 +28,8 @@ export const description: SeaAdminStatisticsProperties = [
 				operation: ['list_active_users'],
 			},
 		},
-		default: '1',
-		description: 'The page number you want to start showing the entries.',
+		default: 0,
+		description: 'The page number you want to start showing the entries',
 	},
 	{
 		displayName: 'Per Page',
@@ -43,7 +43,7 @@ export const description: SeaAdminStatisticsProperties = [
 				operation: ['list_active_users'],
 			},
 		},
-		default: '25',
-		description: 'The number of results that should be returned.',
+		default: 0,
+		description: 'The number of results that should be returned',
 	},
 ];

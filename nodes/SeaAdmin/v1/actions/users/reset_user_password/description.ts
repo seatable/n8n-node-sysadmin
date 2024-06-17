@@ -14,7 +14,6 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description:
-			'The unique user id in the form ...@auth.local. This is not the email address of the user.',
+		description: 'The unique user ID in the form ...@auth.local. This is not the email address of the user.',
 	},
 ];

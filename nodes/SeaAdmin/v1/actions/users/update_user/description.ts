@@ -18,10 +18,9 @@ export const description: SeaAdminUsersProperties = [
 			'The unique user account in the form ...@auth.local. This is not the email address of the user.',
 	},
 	{
-		displayName: 'Grant system admin rights',
+		displayName: 'Grant System Admin Rights',
 		name: 'is_staff',
 		type: 'boolean',
-		required: false,
 		placeholder: 'false',
 		displayOptions: {
 			show: {
@@ -30,13 +29,12 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: false,
-		description: 'true or false if the user will be an (system) admin.',
+		description: 'Whether the user will be an (system) admin',
 	},
 	{
-		displayName: 'Active the account',
+		displayName: 'Active the Account',
 		name: 'is_active',
 		type: 'boolean',
-		required: false,
 		placeholder: 'true',
 		displayOptions: {
 			show: {
@@ -45,13 +43,13 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: true,
-		description: 'An active account could be used right away. Login is possible.',
+		description:
+			'Whether the account is activated right away and the login is possible (true) or the account is created but not activated (false)',
 	},
 	{
 		displayName: 'Role',
 		name: 'role',
 		type: 'string',
-		required: false,
 		placeholder: 'default',
 		displayOptions: {
 			show: {
@@ -67,7 +65,6 @@ export const description: SeaAdminUsersProperties = [
 		displayName: 'Name',
 		name: 'name',
 		type: 'string',
-		required: false,
 		placeholder: 'Example User',
 		displayOptions: {
 			show: {
@@ -76,13 +73,12 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description: 'Full name of the user.',
+		description: 'Full name of the user',
 	},
 	{
 		displayName: 'Login ID',
 		name: 'login_id',
 		type: 'string',
-		required: false,
 		placeholder: '',
 		displayOptions: {
 			show: {
@@ -97,7 +93,6 @@ export const description: SeaAdminUsersProperties = [
 		displayName: 'Email',
 		name: 'contact_email',
 		type: 'string',
-		required: false,
 		placeholder: '',
 		displayOptions: {
 			show: {
@@ -106,13 +101,12 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description: 'The contact email address of the user.',
+		description: 'The contact email address of the user',
 	},
 	{
-		displayName: 'ID in the organization',
+		displayName: 'ID in the Organization',
 		name: 'id_in_org',
 		type: 'string',
-		required: false,
 		placeholder: '',
 		displayOptions: {
 			show: {
@@ -121,13 +115,13 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description: "The team ID of the user, could be a student's ID or employee ID.",
+		description: "The team ID of the user, could be a student's ID or employee ID",
 	},
 	{
 		displayName: 'Password',
 		name: 'password',
 		type: 'string',
-		required: false,
+		typeOptions: { password: true },
 		placeholder: 'password_test',
 		displayOptions: {
 			show: {
@@ -136,13 +130,12 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description: 'Login password of the user.',
+		description: 'Login password of the user',
 	},
 	{
 		displayName: 'Row Limit',
 		name: 'row_limit',
 		type: 'number',
-		required: false,
 		placeholder: '50000',
 		displayOptions: {
 			show: {
@@ -150,14 +143,13 @@ export const description: SeaAdminUsersProperties = [
 				operation: ['update_user'],
 			},
 		},
-		default: '0',
+		default: 0,
 		description: "User's total row limit in number. For example 10000. 0 means unlimited.",
 	},
 	{
-		displayName: 'Quota total (in MB)',
+		displayName: 'Quota Total (in MB)',
 		name: 'quota_total',
 		type: 'string',
-		required: false,
 		placeholder: '',
 		displayOptions: {
 			show: {
@@ -166,13 +158,12 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description: 'Update their total quota in MB.',
+		description: 'Update their total quota in MB',
 	},
 	{
 		displayName: 'Asset Quota (in MB)',
 		name: 'asset_quota_mb',
 		type: 'string',
-		required: false,
 		placeholder: '',
 		displayOptions: {
 			show: {
@@ -181,7 +172,7 @@ export const description: SeaAdminUsersProperties = [
 			},
 		},
 		default: '',
-		description: 'The asset quota in MB.',
+		description: 'The asset quota in MB',
 	},
 	{
 		displayName: 'Hint: If the input is empty, the values will not be changed.',

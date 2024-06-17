@@ -23,7 +23,7 @@ export const versionDescription: INodeTypeDescription = {
 	outputs: ['main'],
 	credentials: [
 		{
-			name: 'seaadmin',
+			name: 'seaadminApi',
 			required: true,
 		},
 	],
@@ -35,10 +35,6 @@ export const versionDescription: INodeTypeDescription = {
 			noDataExpression: true,
 			options: [
 				{
-					name: 'System Info',
-					value: 'system_info',
-				},
-				{
 					name: 'Base',
 					value: 'bases',
 				},
@@ -47,20 +43,24 @@ export const versionDescription: INodeTypeDescription = {
 					value: 'groups',
 				},
 				{
-					name: 'User',
-					value: 'users',
-				},
-				{
-					name: 'Team',
-					value: 'team',
+					name: 'Log',
+					value: 'logs',
 				},
 				{
 					name: 'Statistic',
 					value: 'statistics',
 				},
 				{
-					name: 'Log',
-					value: 'logs',
+					name: 'System Info',
+					value: 'system_info',
+				},
+				{
+					name: 'Team',
+					value: 'team',
+				},
+				{
+					name: 'User',
+					value: 'users',
 				},
 			],
 			default: 'system_info',
