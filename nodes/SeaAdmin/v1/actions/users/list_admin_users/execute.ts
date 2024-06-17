@@ -6,7 +6,7 @@ export async function list_admin_users(
 	index: number,
 ): Promise<INodeExecutionData[]> {
 	// get URL
-	const credentials = await this.getCredentials('seaadmin');
+	const credentials = await this.getCredentials('seaadminApi');
 	const baseURL = credentials?.domain || 'https://cloud.seatable.io';
 
 	const options: OptionsWithUri = {
@@ -16,7 +16,11 @@ export async function list_admin_users(
 		uri: baseURL + '/api/v2.1/admin/admin-users/',
 		json: true,
 	};
-	const responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
+	const responseData = await this.helpers.requestWithAuthentication.call(
+		this,
+		'seaadminApi',
+		options,
+	);
 
 	return this.helpers.returnJsonArray(responseData as IDataObject[]);
 }

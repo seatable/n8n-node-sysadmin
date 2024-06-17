@@ -6,7 +6,7 @@ export async function list_teams(
 	index: number,
 ): Promise<INodeExecutionData[]> {
 	// get URL
-	const credentials = await this.getCredentials('seaadmin');
+	const credentials = await this.getCredentials('seaadminApi');
 	const baseURL = credentials?.domain || 'https://cloud.seatable.io';
 
 	// get parameters
@@ -26,7 +26,11 @@ export async function list_teams(
 		json: true,
 	};
 
-	const responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
+	const responseData = await this.helpers.requestWithAuthentication.call(
+		this,
+		'seaadminApi',
+		options,
+	);
 
 	return this.helpers.returnJsonArray(responseData as IDataObject[]);
 }

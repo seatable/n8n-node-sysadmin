@@ -6,7 +6,7 @@ export async function list_abuse_reports(
 	index: number,
 ): Promise<INodeExecutionData[]> {
 	// get URL
-	const credentials = await this.getCredentials('seaadmin');
+	const credentials = await this.getCredentials('seaadminApi');
 	const baseURL = credentials?.domain || 'https://cloud.seatable.io';
 	const options: OptionsWithUri = {
 		method: 'GET',
@@ -16,7 +16,11 @@ export async function list_abuse_reports(
 		json: true,
 	};
 
-	const responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
+	const responseData = await this.helpers.requestWithAuthentication.call(
+		this,
+		'seaadminApi',
+		options,
+	);
 
 	return this.helpers.returnJsonArray(responseData as IDataObject[]);
 }

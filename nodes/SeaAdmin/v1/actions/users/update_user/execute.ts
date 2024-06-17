@@ -6,7 +6,7 @@ export async function update_user(
 	index: number,
 ): Promise<INodeExecutionData[]> {
 	// get URL
-	const credentials = await this.getCredentials('seaadmin');
+	const credentials = await this.getCredentials('seaadminApi');
 	const baseURL = credentials?.domain || 'https://cloud.seatable.io';
 
 	const user_id = this.getNodeParameter('user_id', index) as string;
@@ -49,7 +49,11 @@ export async function update_user(
 	body.append('is_staff', is_staff);
 	body.append('is_active', is_active);
 
-	const responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
+	const responseData = await this.helpers.requestWithAuthentication.call(
+		this,
+		'seaadminApi',
+		options,
+	);
 
 	return this.helpers.returnJsonArray(responseData as IDataObject[]);
 }

@@ -157,7 +157,7 @@ export const description: SeaAdminTeamProperties = [
 				operation: ['update_team_user'],
 			},
 		},
-		default: 0,
+		default: '',
 		description: "User's total row limit in number. For example 10000. 0 means unlimited.",
 	},
 	{

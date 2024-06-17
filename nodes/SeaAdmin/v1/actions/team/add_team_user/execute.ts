@@ -5,7 +5,7 @@ export async function add_team_user(
 	this: IExecuteFunctions,
 	index: number,
 ): Promise<INodeExecutionData[]> {
-	const credentials = await this.getCredentials('seaadmin');
+	const credentials = await this.getCredentials('seaadminApi');
 	const baseURL = credentials?.domain || 'https://cloud.seatable.io';
 
 	const org_id = this.getNodeParameter('org_id', index) as number;
@@ -33,7 +33,11 @@ export async function add_team_user(
 	// I have absolutely no idea, why this has to be json: false.
 	// With json: true, this call is not working.
 
-	let responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
+	let responseData = await this.helpers.requestWithAuthentication.call(
+		this,
+		'seaadminApi',
+		options,
+	);
 	responseData = JSON.parse(responseData);
 
 	return this.helpers.returnJsonArray(responseData as IDataObject[]);

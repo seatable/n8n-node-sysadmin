@@ -5,7 +5,7 @@ export async function update_team(
 	this: IExecuteFunctions,
 	index: number,
 ): Promise<INodeExecutionData[]> {
-	const credentials = await this.getCredentials('seaadmin');
+	const credentials = await this.getCredentials('seaadminApi');
 	const baseURL = credentials?.domain || 'https://cloud.seatable.io';
 
 	const org_id = this.getNodeParameter('org_id', index) as string;
@@ -37,7 +37,11 @@ export async function update_team(
 	checkAndSet(options, max_user_number, 'max_user_number');
 	checkAndSet(options, asset_quota_mb, 'asset_quota_mb');
 
-	const responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
+	const responseData = await this.helpers.requestWithAuthentication.call(
+		this,
+		'seaadminApi',
+		options,
+	);
 
 	return this.helpers.returnJsonArray(responseData as IDataObject[]);
 }

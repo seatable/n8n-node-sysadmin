@@ -6,7 +6,7 @@ export async function add_new_user(
 	index: number,
 ): Promise<INodeExecutionData[]> {
 	// get URL
-	const credentials = await this.getCredentials('seaadmin');
+	const credentials = await this.getCredentials('seaadminApi');
 	const baseURL = credentials?.domain || 'https://cloud.seatable.io';
 
 	const email = this.getNodeParameter('email', index) as string;
@@ -29,7 +29,11 @@ export async function add_new_user(
 		uri: baseURL + '/api/v2.1/admin/users/',
 		json: true,
 	};
-	const responseData = await this.helpers.requestWithAuthentication.call(this, 'seaadmin', options);
+	const responseData = await this.helpers.requestWithAuthentication.call(
+		this,
+		'seaadminApi',
+		options,
+	);
 
 	return this.helpers.returnJsonArray(responseData as IDataObject[]);
 }

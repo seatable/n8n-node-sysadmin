@@ -28,7 +28,7 @@ export const description: SeaAdminStatisticsProperties = [
 				operation: ['list_active_users'],
 			},
 		},
-		default: 0,
+		default: 1,
 		description: 'The page number you want to start showing the entries',
 	},
 	{
@@ -43,7 +43,7 @@ export const description: SeaAdminStatisticsProperties = [
 				operation: ['list_active_users'],
 			},
 		},
-		default: 0,
+		default: 25,
 		description: 'The number of results that should be returned',
 	},
 ];
