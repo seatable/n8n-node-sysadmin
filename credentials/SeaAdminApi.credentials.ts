@@ -8,7 +8,7 @@ import type {
 export class SeaAdminApi implements ICredentialType {
 	name = 'seaadminApi';
 	displayName = 'SeaTable Sys-Admin API';
-	documentationUrl = 'https://api.seatable.io/';
+	documentationUrl = 'https://api.seatable.com/';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'Environment',

@@ -1,19 +1,19 @@
 {
 	"name": "n8n-nodes-seaadmin",
-	"version": "1.3.0",
+	"version": "1.3.1",
 	"description": "n8n app to execute SeaTable API calls as Sys-Admin.",
 	"keywords": [
 		"n8n-community-node-package"
 	],
 	"license": "MIT",
-	"homepage": "https://seatable.io/integrations/",
+	"homepage": "https://seatable.com/integrations/",
 	"author": {
 		"name": "Christoph Dyllick-Brenzinger",
-		"email": "cdb@seatable.io"
+		"email": "cdb@seatable.com"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/christophdb/n8n-nodes-seaadmin.git"
+		"url": "https://github.com/seatable/n8n-node-sysadmin.git"
 	},
 	"main": "index.js",
 	"scripts": {
